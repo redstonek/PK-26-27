@@ -13,26 +13,18 @@ int main() {
     if (s == 1) {
         cout << "Podaj temperaturę: ";
         cin >> c;
+        f = c * 9 / 5 + 32;
+        if (c < 273.15) cout << "Zbyt zimno na liczenie!";
+        else cout << c << " st. Celsjusza to " << f << " st. Fahrenheita";
+        
     }
     else if (s == 2) {
         cout << "Podaj temperaturę: ";
         cin >> f;
-       
-    }
+        c = (f - 32) * 5 / 9;
+        if (c < 273.15) cout << "Zbyt zimno na liczenie!";
+        else cout << f << " st. Fahrenheita to "<< c << " st. Celsjusza";
 
     return 0;
 
 }
-
-/*Wybierz sposób konwersji:
-[1] Celsjusza na Fahrenheita
-[2] Fahrenheita na Celsjusza
-Wybór: 1
-Podaj temperaturę: 36.6
-36.60 st. Celsjusza to 97.88 st. Fahrenheita
-Wybierz sposób konwersji:
-[1] Celsjusza na Fahrenheita
-[2] Fahrenheita na Celsjusza
-Wybór: 1
-Podaj temperaturę: -300
-Zbyt zimno na liczenie!*/
